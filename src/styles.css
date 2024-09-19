@@ -1,0 +1,97 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+
+body {
+    /* background-color: rebeccapurple; */
+    background-image: url(./images/background.jpg);
+    background-size:     cover;                      /* <------ */
+    background-repeat: no-repeat;
+
+    
+
+    display: flex;
+    flex-direction: column;
+  }
+
+header {
+    background-color: black;
+    opacity: 0.8;
+    color: aliceblue;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#restaurant-name {
+    padding: 10px;
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+    opacity: 0.8;
+    padding: 10px 20px;
+    /* border: 1px solid red; */
+    border: none;
+
+
+    /* added for moving button hover */
+    /* Ensure button's position can be adjusted */
+    position: relative; 
+    /* Smooth transition for transform and color */
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+button:hover {
+    color: yellow;
+    transform: translateY(-5px); /* Move the button up by 10px */
+}
+
+#home-button {
+    border-bottom: 1px white solid;
+}
+
+#content {
+    flex-grow: 1;
+    background-color: aqua;
+    color: aliceblue;
+    background-color: black;
+    opacity: 0.8;
+
+     /* Set the width properties */
+     width: 30%;          /* This sets a flexible width relative to the viewport */
+     max-width: 1200px;   /* The container won't grow beyond 1200px */
+     min-width: 300px;    /* The container won't shrink below 300px */
+ 
+     margin: 40px auto;   /* Center the container horizontally */
+
+
+    /* margin: 40px 200px; */
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: aqua;
+    color: aliceblue;
+    background-color: black;
+    opacity: 0.8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+}
