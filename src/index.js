@@ -16,12 +16,12 @@ let active = states.HOME;
 
 document.addEventListener('DOMContentLoaded', () => { 
     // initial home page load
-    homeLoad();
+    // homeLoad();
+    menuLoad();
 
     const homeButton = document.getElementById('home-button');
     const menuButton = document.getElementById('menu-button');
     const contactButton = document.getElementById('contact-button');
-
 
     homeButton.onclick = () => setActiveState(states.HOME, homeButton);
     menuButton.onclick = () => setActiveState(states.MENU, menuButton);
