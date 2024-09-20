@@ -204,7 +204,7 @@ footer {
 
 
 /* Styles for screens 390px and below (iPhone 12 Pro) */
-@media (max-width: 390px) {
+@media (max-width: 400px) {
 
     #restaurant-name {
         font-size: 35px;           /* Further reduce font size for smaller screens */
