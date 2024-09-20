@@ -222,6 +222,7 @@ footer {
         max-width: 100%;           /* Make content full-width */
         padding: 15px;             /* Reduce padding */
         margin: 15px auto;         /* Center content with reduced margin */
+        height: auto;
     }
 
     .grid-container {
@@ -240,5 +241,9 @@ footer {
     
     #chef-image {
         width: 80%;                /* Make the image more flexible */
+    }
+
+    #location-image {
+        width: 100%;
     }
 }

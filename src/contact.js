@@ -20,7 +20,7 @@ export function contactLoad() {
 
     const image = document.createElement("img");
     image.src = locationImg;
-    image.id = `ocation-image`;
+    image.id = `location-image`;
 
     content.appendChild(phoneDiv);
     content.appendChild(addressDiv);
