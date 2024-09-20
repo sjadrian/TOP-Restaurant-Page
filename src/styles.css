@@ -200,6 +200,12 @@ footer {
     #chef-image {
         width: 80%;                /* Make the image more flexible */
     }
+
+    #location-image {
+        width: 100%;
+    }
+
+    
 }
 
 
