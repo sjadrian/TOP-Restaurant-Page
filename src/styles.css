@@ -55,8 +55,9 @@ button {
 }
 
 button:hover {
-    color: yellow;
+    color: orange;
     transform: translateY(-5px); /* Move the button up by 10px */
+    cursor: pointer;
 }
 
 #home-button {
@@ -71,12 +72,21 @@ button:hover {
 
     /* Set the width properties */
     /* width: 40%;          This sets a flexible width relative to the viewport */
-    max-width: 800px;   /* The container won't grow beyond 1200px */
+    max-width: 700px;   /* The container won't grow beyond 1200px */
     min-width: 300px;    /* The container won't shrink below 300px */
  
-    margin: 40px auto;   /* Center the container horizontally */
-    padding: 20px;
+    margin: 60px auto;   /* Center the container horizontally */
+    padding: 40px;
     text-align: center;
+
+    /* initially hidden */
+    opacity: 0;          
+    /* Smooth transition effect */
+    transition: opacity 0.3s ease-in-out; 
+}
+
+#content.visible {
+    opacity: 1;          /* Fully visible */
 }
 
 #chef-image-container {
@@ -90,8 +100,7 @@ button:hover {
 }
 
 #chef-image {
-    /* background-image: url(./images/chef.png); */
-    width: 60%;
+    width: 50%;
     opacity: 1;
 }
 
@@ -109,13 +118,14 @@ button:hover {
 
 .item-container {
     padding: 20px;
-    border: 1px solid red;
+    border: 1px solid orange;
     background-color: rgba(0, 0, 0, 0.7); /* Use rgba for semi-transparent background */
 }
 
 .item-container:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, color 0.3s ease; 
+    cursor: pointer;
 }
 
 .menu-title, .menu-ingredient {
@@ -130,6 +140,13 @@ button:hover {
     font-size: 18px;
 }
 
+#phone-number, #address, .location-image-container {
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
 footer {
     background-color: aqua;
     color: aliceblue;
@@ -142,4 +159,86 @@ footer {
 
     padding: 10px 0px;
     font-size: 20px;
+}
+
+/* for mobile phones */
+/* Styles for screens 600px and below (typical mobile) */
+@media (max-width: 600px) {
+
+    #restaurant-name {
+        font-size: 40px;           /* Reduce font size for mobile */
+        text-align: center;        /* Center the text */
+    }
+
+    button {
+        font-size: 18px;           /* Reduce button font size */
+        padding: 10px;             /* Reduce padding for buttons */
+        margin: 5px 0;             /* Adjust margin for buttons */
+        width: 100%;               /* Make buttons full-width */
+    }
+
+    #content {
+        max-width: 100%;           /* Make content full-width */
+        padding: 20px;             /* Reduce padding */
+        margin: 20px auto;         /* Center content with reduced margin */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to single column layout */
+        gap: 20px;                  /* Reduce gap between items */
+    }
+
+    .item-container {
+        padding: 10px;             /* Reduce padding inside grid items */
+    }
+
+    .text-container {
+        font-size: 18px;           /* Adjust text size for readability */
+        padding: 10px;             /* Reduce padding */
+    }
+    
+    #chef-image {
+        width: 80%;                /* Make the image more flexible */
+    }
+}
+
+
+/* Styles for screens 390px and below (iPhone 12 Pro) */
+@media (max-width: 390px) {
+
+    #restaurant-name {
+        font-size: 35px;           /* Further reduce font size for smaller screens */
+        text-align: center;        /* Center the text */
+    }
+
+    button {
+        font-size: 16px;           /* Reduce button font size */
+        padding: 8px;              /* Reduce padding for buttons */
+        margin: 5px 0;             /* Adjust margin for buttons */
+        width: 100%;               /* Make buttons full-width */
+    }
+
+    #content {
+        max-width: 100%;           /* Make content full-width */
+        padding: 15px;             /* Reduce padding */
+        margin: 15px auto;         /* Center content with reduced margin */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to single column layout */
+        gap: 15px;                  /* Reduce gap between items */
+    }
+
+    .item-container {
+        padding: 8px;              /* Further reduce padding inside grid items */
+    }
+
+    .text-container {
+        font-size: 16px;           /* Adjust text size for readability */
+        padding: 8px;              /* Reduce padding */
+    }
+    
+    #chef-image {
+        width: 80%;                /* Make the image more flexible */
+    }
 }
