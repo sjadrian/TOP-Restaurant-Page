@@ -177,6 +177,11 @@ footer {
         width: 100%;               /* Make buttons full-width */
     }
 
+    nav {
+        display: flex;
+    };
+
+
     #content {
         max-width: 100%;           /* Make content full-width */
         padding: 20px;             /* Reduce padding */
@@ -220,15 +225,21 @@ footer {
     button {
         font-size: 16px;           /* Reduce button font size */
         padding: 8px;              /* Reduce padding for buttons */
-        margin: 5px 0;             /* Adjust margin for buttons */
-        width: 100%;               /* Make buttons full-width */
+        margin: 5px 5px;             /* Adjust margin for buttons */
+        width: 80%;               /* Make buttons full-width */
     }
+
+    nav {
+        display: flex;
+    };
 
     #content {
         max-width: 100%;           /* Make content full-width */
         padding: 15px;             /* Reduce padding */
         margin: 15px auto;         /* Center content with reduced margin */
         height: auto;
+
+        display: flex;
     }
 
     .grid-container {
