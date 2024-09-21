@@ -7,9 +7,6 @@ export function homeLoad() {
 
     const textDiv = document.createElement("div");
     textDiv.classList.add("text-container");
-    // textDiv.innerHTML = `Best pizza in your country <br>
-    // Made with passion since 1908 <br>
-    // Order online or visit us! `;
     textDiv.innerHTML = `Best pizza in your country`
 
     const textDiv2 = document.createElement("div");
@@ -21,8 +18,6 @@ export function homeLoad() {
 
     const imgDiv = document.createElement("div");
     imgDiv.id = `chef-image-container`;
-    // imgDiv.innerHTML = `<img id="chef-image" src="images/chef.png" alt="">`;
-   
    
     const image = document.createElement("img");
     image.src = chefImage;

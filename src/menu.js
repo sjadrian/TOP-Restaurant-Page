@@ -52,6 +52,7 @@ const pizzas = [
     },
 ]
 
+
 export function menuLoad() {
     console.log("menu load called");
 
@@ -60,12 +61,9 @@ export function menuLoad() {
     const gridDiv = document.createElement("div");
     gridDiv.classList.add("grid-container");
 
-
-    // repeat from here
     pizzas.forEach(pizza => {
         console.log(pizza.name);
 
-        //make item div
         const itemDiv = document.createElement("div");
         itemDiv.classList.add("item-container");
 
@@ -93,34 +91,5 @@ export function menuLoad() {
 
         gridDiv.appendChild(itemDiv);
     });
-
-    // const itemDiv = document.createElement("div");
-    // itemDiv.classList.add("item-container");
-
-    // const menuImgDiv = document.createElement("div");
-    // menuImgDiv.classList.add("menu-image");
-
-
-    // const image = document.createElement("img");
-    // image.src = salsicciaPizza;
-    // image.id = `pizza-image`;
-    
-    // menuImgDiv.appendChild(image);
-
-    // const menuTitleDiv = document.createElement("div");
-    // menuTitleDiv.classList.add("menu-title");
-    // menuTitleDiv.innerHTML = `Salsiccia`;
-
-    // const menuIngredDiv = document.createElement("div");
-    // menuIngredDiv.classList.add("menu-ingredient");
-    // menuIngredDiv.innerHTML = `Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil`;
-
-    // itemDiv.appendChild(menuImgDiv);
-    // itemDiv.appendChild(menuTitleDiv);
-    // itemDiv.appendChild(menuIngredDiv);
-    // gridDiv.appendChild(itemDiv);
-
-    // to here
-
     content.appendChild(gridDiv);
 }

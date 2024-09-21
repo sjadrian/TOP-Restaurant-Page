@@ -8,16 +8,13 @@ html,body {
 
 
 body {
-    /* background-color: rebeccapurple; */
     background-image: url(./images/background.jpg);
-    background-size:     cover;                      /* <------ */
+    background-size: cover;                      
     background-repeat: no-repeat;
-
-    
+    background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
   }
 
 header {
@@ -43,12 +40,9 @@ button {
     font-size: 25px;
     opacity: 0.8;
     padding: 10px 20px;
-    /* border: 1px solid red; */
     border: none;
 
-
     /* added for moving button hover */
-    /* Ensure button's position can be adjusted */
     position: relative; 
     /* Smooth transition for transform and color */
     transition: transform 0.3s ease, color 0.3s ease; 
@@ -56,7 +50,7 @@ button {
 
 button:hover {
     color: orange;
-    transform: translateY(-5px); /* Move the button up by 10px */
+    transform: translateY(-5px);
     cursor: pointer;
 }
 
@@ -67,15 +61,13 @@ button:hover {
 #content {
     flex-grow: 1;
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.7); /* Use rgba for semi-transparent background */
-
+    background-color: rgba(0, 0, 0, 0.7); 
 
     /* Set the width properties */
-    /* width: 40%;          This sets a flexible width relative to the viewport */
-    max-width: 700px;   /* The container won't grow beyond 1200px */
-    min-width: 300px;    /* The container won't shrink below 300px */
+    max-width: 700px;   
+    min-width: 300px;    
  
-    margin: 60px auto;   /* Center the container horizontally */
+    margin: 60px auto;  
     padding: 40px;
     text-align: center;
 
@@ -86,7 +78,7 @@ button:hover {
 }
 
 #content.visible {
-    opacity: 1;          /* Fully visible */
+    opacity: 1;
 }
 
 #chef-image-container {
@@ -111,7 +103,6 @@ button:hover {
 
 .grid-container {
     display: grid;
-    /* grid-template: 50px 50px / 50px 50px; */
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
@@ -119,7 +110,7 @@ button:hover {
 .item-container {
     padding: 20px;
     border: 1px solid orange;
-    background-color: rgba(0, 0, 0, 0.7); /* Use rgba for semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .item-container:hover {
@@ -146,7 +137,6 @@ button:hover {
     font-size: 20px;
 }
 
-
 footer {
     background-color: aqua;
     color: aliceblue;
@@ -162,71 +152,67 @@ footer {
 }
 
 /* for mobile phones */
-/* Styles for screens 600px and below (typical mobile) */
 @media (max-width: 600px) {
 
     #restaurant-name {
-        font-size: 40px;           /* Reduce font size for mobile */
-        text-align: center;        /* Center the text */
+        font-size: 40px;
+        text-align: center;
     }
 
     button {
-        font-size: 18px;           /* Reduce button font size */
-        padding: 10px;             /* Reduce padding for buttons */
-        margin: 5px 0;             /* Adjust margin for buttons */
-        width: 100%;               /* Make buttons full-width */
+        font-size: 18px;           
+        padding: 10px;             
+        margin: 5px 0;             
+        width: 100%;               
     }
 
     nav {
         display: flex;
     };
 
-
     #content {
-        max-width: 100%;           /* Make content full-width */
-        padding: 20px;             /* Reduce padding */
-        margin: 20px auto;         /* Center content with reduced margin */
+        max-width: 100%;           
+        padding: 20px;             
+        margin: 20px auto;
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Switch to single column layout */
-        gap: 20px;                  /* Reduce gap between items */
+        grid-template-columns: 1fr; 
+        gap: 20px;                  
     }
 
     .item-container {
-        padding: 10px;             /* Reduce padding inside grid items */
+        padding: 10px;             
     }
 
     .text-container {
-        font-size: 18px;           /* Adjust text size for readability */
-        padding: 10px;             /* Reduce padding */
+        font-size: 18px;           
+        padding: 10px;             
     }
     
     #chef-image {
-        width: 80%;                /* Make the image more flexible */
+        width: 80%;                
     }
 
     #location-image {
         width: 100%;
     }
-
-    
 }
 
 
-/* Styles for screens 390px and below (iPhone 12 Pro) */
+/* Styles for screens 390px and below */
 @media (max-width: 400px) {
 
     #restaurant-name {
-        font-size: 35px;           /* Further reduce font size for smaller screens */
-        text-align: center;        /* Center the text */
+        font-size: 35px;        
+        text-align: center;
     }
 
     button {
-        font-size: 16px;           /* Reduce button font size */
-        padding: 8px;              /* Reduce padding for buttons */
-        margin: 5px 5px;             /* Adjust margin for buttons */
-        width: 80%;               /* Make buttons full-width */
+        font-size: 16px;           
+        padding: 8px;              
+        margin: 5px 5px;
+        width: 80%;
     }
 
     nav {
@@ -234,30 +220,30 @@ footer {
     };
 
     #content {
-        max-width: 100%;           /* Make content full-width */
-        padding: 15px;             /* Reduce padding */
-        margin: 15px auto;         /* Center content with reduced margin */
+        max-width: 100%;
+        padding: 15px;
+        margin: 15px auto;
         height: auto;
 
         display: flex;
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Switch to single column layout */
-        gap: 15px;                  /* Reduce gap between items */
+        grid-template-columns: 1fr; 
+        gap: 15px;
     }
 
     .item-container {
-        padding: 8px;              /* Further reduce padding inside grid items */
+        padding: 8px;
     }
 
     .text-container {
-        font-size: 16px;           /* Adjust text size for readability */
-        padding: 8px;              /* Reduce padding */
+        font-size: 16px;
+        padding: 8px;
     }
     
     #chef-image {
-        width: 80%;                /* Make the image more flexible */
+        width: 80%;
     }
 
     #location-image {
